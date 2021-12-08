@@ -1,0 +1,13 @@
+namespace: ansilab-nl
+name: demo_one
+version: 1.0.2
+readme: README.md
+authors:
+- JP Mens <jp@mens.de>
+- Ton Kersten <tonk@smartowl.nl>
+description: A demo collection for training
+license: 0BSD
+tags: [ demo ]
+repository: https://github.com/ansilab-nl/ansilab_demo_one
+dependencies: {}
+
