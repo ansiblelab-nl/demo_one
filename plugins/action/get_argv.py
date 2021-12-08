@@ -41,7 +41,7 @@ class ActionModule(ActionBase):
             'skipped': False,
             'msg': '',
             'ansible_facts': {
-                'argv' : sys.argv,
+                'argv': sys.argv,
                 'playbooks': playbooks,
             }
         }

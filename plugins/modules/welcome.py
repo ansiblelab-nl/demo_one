@@ -1,5 +1,11 @@
 from ansible.module_utils.basic import AnsibleModule
 
+DOCUMENTATION = '''
+    module: welcome
+    description: Ansible demo module
+'''
+
+
 def run_module():
 
     module_args = dict(
@@ -13,6 +19,7 @@ def run_module():
 
     result = dict(changed=False, msg="Bienvenue")
     module.exit_json(**result)
+
 
 if __name__ == '__main__':
     run_module()
