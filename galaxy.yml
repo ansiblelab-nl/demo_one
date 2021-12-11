@@ -1,4 +1,4 @@
-namespace: ansiblelab-nl
+namespace: ansilabnl
 name: demo_one
 version: 1.0.3
 readme: README.md
@@ -8,6 +8,6 @@ authors:
 description: A demo collection for training
 license: 0BSD
 tags: [ demo ]
-repository: https://github.com/ansiblelab-nl/ansiblelab_demo_one
+repository: https://github.com/ansilabnl/demo_one
 dependencies: {}
 
