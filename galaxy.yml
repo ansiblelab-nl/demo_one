@@ -1,4 +1,4 @@
-namespace: ansiblelab_nl
+namespace: ansiblelab-nl
 name: demo_one
 version: 1.0.3
 readme: README.md
