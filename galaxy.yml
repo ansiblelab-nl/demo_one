@@ -3,11 +3,12 @@ name: demo_one
 version: 1.0.3
 readme: README.md
 authors:
-- JP Mens <jp@mens.de>
-- Ton Kersten <ansiblelab@tonkersten.com>
+  - JP Mens <jp@mens.de>
+  - Ton Kersten <ansiblelab@tonkersten.com>
 description: A demo collection for training
 license: 0BSD
-tags: [ demo ]
+tags:
+  - demo
 repository: https://github.com/ansilabnl/demo_one
 dependencies: {}
 
