@@ -1,9 +1,9 @@
 from ansible.module_utils.basic import AnsibleModule
 
-DOCUMENTATION = '''
+DOCUMENTATION = """
     module: welcome
     description: Ansible demo module
-'''
+"""
 
 
 def run_module():
@@ -21,5 +21,5 @@ def run_module():
     module.exit_json(**result)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run_module()

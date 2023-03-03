@@ -1,19 +1,20 @@
 #!/usr/bin/python
 # Make coding more python3-ish, this is required for contributions to Ansible
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
+
 __metaclass__ = type
 
 from ansible.plugins.callback import CallbackBase
 
-DOCUMENTATION = '''
+DOCUMENTATION = """
     callback: status
     description: show status of playbook run.
-'''
+"""
 
 
 class CallbackModule(CallbackBase):
     CALLBACK_VERSION = 2.0
-    CALLBACK_NAME = 'status'
+    CALLBACK_NAME = "status"
     CALLBACK_NEEDS_WHITELIST = True
 
     def __init__(self):
@@ -28,8 +29,10 @@ class CallbackModule(CallbackBase):
 
     def v2_runner_on_ok(self, result):
         print(dir(result))
-        print('On a succesfull task:\nTask name: %s\nTask result: %s\n' %
-              (result.task_name, result._result))
+        print(
+            "On a succesfull task:\nTask name: %s\nTask result: %s\n"
+            % (result.task_name, result._result)
+        )
 
     def v2_runner_on_failed(self, taskresult):
         print(dir(taskresult))
