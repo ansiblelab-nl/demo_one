@@ -1,6 +1,6 @@
 namespace: ansilabnl
 name: demo_one
-version: 1.0.5
+version: 1.0.6
 readme: README.md
 authors:
   - JP Mens <jp@mens.de>
