@@ -25,7 +25,6 @@ except ImportError:
 # Get all Ansible commandline arguments and place these in the
 # `facts` dictionairy as `ansible_facts['argv']`
 class ActionModule(ActionBase):
-
     # No file transfer needed
     TRANSFERS_FILES = False
 

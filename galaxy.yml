@@ -1,6 +1,6 @@
 namespace: ansilabnl
 name: demo_one
-version: 1.0.6
+version: 1.0.7
 readme: README.md
 authors:
   - JP Mens <jp@mens.de>
@@ -11,4 +11,8 @@ tags:
   - demo
 repository: https://github.com/ansilabnl/demo_one
 dependencies: {}
-
+build_ignore:
+  - .tox
+  - '*.tar.gz'
+  - '*.tgz'
+  - ansible.cfg

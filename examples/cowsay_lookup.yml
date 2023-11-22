@@ -1,0 +1,48 @@
+---
+#
+# Create a cowsay file, with system information, e.g. the motd.
+#
+#
+#     ___________________________
+#    < Member of the AAP Cluster >     | Hostname    = hammer
+#     ---------------------------      | Host alias  = cn01
+#                \   ^__^              | Function    = Ansible AAP Control node
+#                 \  (oo)\_______      | Location    = Amsterdam
+#                    (__)\       )\/\  | IP address  = 192.168.1.74
+#                        ||----w |     | VMware name = EXDEBENE01
+#                        ||     ||     | Last update = 2023-11-22 13:56:13
+#
+#
+
+- name: Ansible Cowsay lookup demo
+  hosts: localhost
+  become: false
+  connection: local
+
+  vars:
+    host_title: Member of the AAP Cluster
+    host_alias: cn01
+    func: Ansible AAP Control node
+    loc: Amsterdam
+    vmname: EXDEBENE01
+
+  tasks:
+    - name: Ensure motd has correct info
+      ansible.builtin.copy:
+        dest: /tmp/motd
+        mode: "0644"
+        content: "{{ lookup(
+          'ansilabnl.demo_one.cowsay',
+          host_title,
+          sysinfo=sysinfo,
+          top_newline=True, bottom_newline=True
+          ) }}"
+      vars:
+        sysinfo:
+          - Hostname    = {{ ansible_facts['hostname'] }}
+          - Host alias  = {{ host_alias }}
+          - Function    = {{ func }}
+          - Location    = {{ loc }}
+          - IP address  = {{ ansible_facts['default_ipv4']['address'] }}
+          - VMware name = {{ vmname }}
+          - Last update = {{ ansible_local['last_update'] | default('Unknown') }}
