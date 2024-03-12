@@ -1,10 +1,10 @@
 namespace: ansilabnl
 name: demo_one
-version: 1.0.7
+version: 1.0.8
 readme: README.md
 authors:
   - JP Mens <jp@mens.de>
-  - Ton Kersten <ansiblelab@tonkersten.com>
+  - Ton Kersten <tonk@ansiblelab.nl>
 description: A demo collection for training
 license: 0BSD
 tags:
